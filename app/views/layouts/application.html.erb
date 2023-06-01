@@ -15,11 +15,21 @@
     </div>
     <div>
       <a href="/">Home</a>
-      <a href="/logout">Logout</a>
+      <% if @current_user %>
+        <a href="/logout">Logout</a>
+      <% else %>
       <a href="/login">Login</a>
       <a href="/users/new">Signup</a>
+      <% end %>
     </div>
 
+    <div>
+      <% if @current_user %>
+        Hi <%= @current_user["username"] %>
+      <% else %>
+      <% end %>
+    </div>
+       
     <%= yield %>
   </body>
 </html>

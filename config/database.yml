@@ -23,7 +23,7 @@ test:
 production:
   <<: *default
   adapter: postgresql
-  database: my_app_production
+  database: bikestagram_production
   username: bikestagram
   password: <%= ENV["BIKESTAGRAM"] %>
-  database: db/production.sqlite3
+  

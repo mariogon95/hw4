@@ -32,8 +32,11 @@
       </div>
     </nav>
     <div class = "container">
-      <div>
-        <%= flash["notice"] %>
+      <div class="m-3">
+        <% if @current_user %>
+        Logged in as <%= @current_user["username"] %>
+        <% else%>
+        <% end%>
       </div>
              
       <%= yield %>

@@ -38,7 +38,13 @@
         <% else%>
         <% end%>
       </div>
-             
+      
+      <div class="container mt-3">
+        <div class="row">
+          <%= flash["notice"] %>
+        </div>
+      </div>
+
       <%= yield %>
     </div>
   </body>
